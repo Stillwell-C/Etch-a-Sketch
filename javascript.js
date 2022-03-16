@@ -12,13 +12,26 @@ const gridDivRight = document.createElement('div');
 gridDivRight.classList.add('gridDivRight');
 container.appendChild(gridDivRight)
 
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', () => { 
+    document.querySelectorAll('.cell').forEach(item => {
+        item.classList.remove('hover-color');
+    })
+    const usrCellNum = prompt('How many squares do you want on each side of your next grid?', '');
+    if (usrCellNum > 100) {
+        alert('Number too large. Please try again.')
+    } else {
+        let usrCellCount = usrCellNum**2;
+        createCells(usrCellCount);
+    }
+});
+
 let cellCount = 256;
 
 function createCells(c) {
     for(let i = 0; i < c; i++) {
     let cell = document.createElement('div');
     cell.classList.add('cell', `cell${1+i}`);
-    // cell.textContent = 'cell';
     gridDiv.appendChild(cell);
     }
 }
@@ -32,12 +45,7 @@ document.querySelectorAll('.cell').forEach(item => {
     )
 })
 
-const clearBtn = document.querySelector('#clear');
-clearBtn.addEventListener('click', () => { 
-    document.querySelectorAll('.cell').forEach(item => {
-        item.classList.remove('hover-color');
-    })
-});
+
 
 
 // for (let i = 0; i < cellCount; i++) {
