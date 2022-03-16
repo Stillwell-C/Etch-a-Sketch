@@ -6,16 +6,18 @@
 .gridDiv {
     /* display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; */
-    max-width: 725px;
+    max-width: 740px;
+    max-height: 740px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .cell {
-    
     padding: 20px;
-    border: 2px solid black;
+    border: solid black;
     flex: 1;
+    
 }
 
 .hover-color {
