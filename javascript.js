@@ -17,11 +17,21 @@ function createCells(c) {
 
 createCells(cellCount);
 
+let cells = document.querySelectorAll('.cell');
 
-let cells = document.querySelectorAll('.cell').forEach(item => {
-    item.addEventListener('mouseover', e => e.target.classList.add('color-class')
+document.querySelectorAll('.cell').forEach(item => {
+    item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
     )
 })
+
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', () => { 
+    document.querySelectorAll('.cell').forEach(item => {
+        item.classList.remove('hover-color');
+    })
+});
+
+
 // for (let i = 0; i < cellCount; i++) {
 //     cells.addEventListener('mouseover', () => {
 //         console.log("mouseover");
