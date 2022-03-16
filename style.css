@@ -1,0 +1,12 @@
+.gridDiv {
+    margin: 100px;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    padding: 10px;
+    border: 2px solid black;
+    flex: 1;
+}
