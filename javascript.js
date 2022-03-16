@@ -9,7 +9,7 @@ let cellCount = 256;
 function createCells(c) {
     for(let i = 0; i < c; i++) {
     let cell = document.createElement('div');
-    cell.classList.add('cell');
+    cell.classList.add('cell', `cell${1+i}`);
     // cell.textContent = 'cell';
     gridDiv.appendChild(cell);
     }
@@ -19,9 +19,8 @@ createCells(cellCount);
 
 
 let cells = document.querySelectorAll('.cell').forEach(item => {
-    item.addEventListener('mouseover', () => {
-        console.log("mouseover");
-    })
+    item.addEventListener('mouseover', e => e.target.classList.add('color-class')
+    )
 })
 // for (let i = 0; i < cellCount; i++) {
 //     cells.addEventListener('mouseover', () => {
