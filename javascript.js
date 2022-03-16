@@ -1,8 +1,16 @@
 const container = document.querySelector('#container')
 
+const gridDivLeft = document.createElement('div');
+gridDivLeft.classList.add('gridDivLeft');
+container.appendChild(gridDivLeft)
+
 const gridDiv = document.createElement('div');
 gridDiv.classList.add('gridDiv');
 container.appendChild(gridDiv);
+
+const gridDivRight = document.createElement('div');
+gridDivRight.classList.add('gridDivRight');
+container.appendChild(gridDivRight)
 
 let cellCount = 256;
 
