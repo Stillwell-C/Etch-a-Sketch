@@ -1,9 +1,20 @@
+body {
+    background-color:linen;
+}
 
+.heading {
+    text-align: center;
+}
 
 .container{
     display:flex;
     justify-content: center;
     
+}
+
+.button-container {
+    display:flex;
+    justify-content: center;
 }
 
 .gridDiv {
