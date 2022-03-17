@@ -22,8 +22,14 @@ function createCells(c) {
         cells[p].style.width = `${maxSize / c}px`;
         cells[p].style.height = `${maxSize / c}px`;
     }
+    changeColor(color)
+}
+
+let color = "coral"
+
+function changeColor(color) {
     document.querySelectorAll('.cell').forEach(item => {
-        item.addEventListener('mouseover', e => e.target.style.backgroundColor = "coral")
+        item.addEventListener('mouseover', e => e.target.style.backgroundColor = color)
     })
 }
 
