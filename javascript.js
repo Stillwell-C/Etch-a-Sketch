@@ -32,9 +32,6 @@ createCells(cellColumn);
 
 const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', () => { 
-    document.querySelectorAll('.cell').forEach(item => {
-        item.style.backgroundColor = "transparent";
-    })
     let usrCellColumn = prompt('How many squares do you want on each side of your next grid?', '');
     if (usrCellColumn > 100 || usrCellColumn < 0) {
         alert('Please enter a number between 1-100.')
@@ -53,8 +50,3 @@ eraseBtn.addEventListener('click', () => {
     })
 })
 
-
-// document.querySelectorAll('.cell').forEach(item => {
-//     item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
-//     )
-// })
