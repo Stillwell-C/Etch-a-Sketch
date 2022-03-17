@@ -16,12 +16,16 @@ function createCells(c) {
     let cell = document.createElement('div');
     cell.classList.add('cell', `cell${1+i}`);
     gridDiv.appendChild(cell);
+}
     let cells = document.getElementsByClassName('cell');
     for (let p = 0; p < cells.length; p++) {
         cells[p].style.width = `${maxSize / c}px`;
         cells[p].style.height = `${maxSize / c}px`;
     }
-    }
+    document.querySelectorAll('.cell').forEach(item => {
+        item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
+        )
+    })
 }
 
 
@@ -43,18 +47,5 @@ clearBtn.addEventListener('click', () => {
     }
 });
 
-let cells = document.querySelectorAll('.cell');
 
-document.querySelectorAll('.cell').forEach(item => {
-    item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
-    )
-})
-
-
-
-// for (let i = 0; i < cellCount; i++) {
-//     cells.addEventListener('mouseover', () => {
-//         console.log("mouseover");
-//     });
-// }
 
