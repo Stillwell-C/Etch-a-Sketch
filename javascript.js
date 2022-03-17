@@ -23,23 +23,32 @@ function createCells(c) {
         cells[p].style.height = `${maxSize / c}px`;
     }
     changeColor(color)
+    
 }
 
-let color 
-
-function getRandomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(math.random()*16)];
-    }
-    return `${color}`;
-}
-
+let color = "coral"
 
 function changeColor(color) {
     document.querySelectorAll('.cell').forEach(item => {
         item.addEventListener('mouseover', e => e.target.style.backgroundColor = color)
+    })
+}
+
+let ranColor
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let ranColor = '#';
+    for (let i = 0; i < 6; i++) {
+        ranColor += letters[Math.floor(Math.random()*16)];
+    }
+    return ranColor;
+}
+
+function changeColorRandom() {
+    document.querySelectorAll('.cell').forEach(item => {
+        item.addEventListener('mouseover', e => e.target.style.backgroundColor = 
+        "#" + ((1<<24)*Math.random() | 0).toString(16))
     })
 }
 
