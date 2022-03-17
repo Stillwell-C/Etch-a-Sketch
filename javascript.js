@@ -38,7 +38,7 @@ clearBtn.addEventListener('click', () => {
     })
     let usrCellColumn = prompt('How many squares do you want on each side of your next grid?', '');
     if (usrCellColumn > 100 || usrCellColumn < 0) {
-        alert('Please try again. Enter a number under 100.')
+        alert('Please enter a number between 1-100.')
     } else {
         document.querySelectorAll('.cell').forEach(item => {
             gridDiv.removeChild(item)
