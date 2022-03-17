@@ -6,10 +6,20 @@ body {
     text-align: center;
 }
 
+.center-content {
+    display:flex;
+    justify-content: center;
+}
+
 .container{
     display:flex;
     justify-content: center;
-    
+    flex-shrink: 0;
+}
+
+.left-container,
+.right-container {
+    flex-basis: 200px
 }
 
 .button-container {
