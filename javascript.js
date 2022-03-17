@@ -23,8 +23,7 @@ function createCells(c) {
         cells[p].style.height = `${maxSize / c}px`;
     }
     document.querySelectorAll('.cell').forEach(item => {
-        item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
-        )
+        item.addEventListener('mouseover', e => e.target.style.backgroundColor = "coral")
     })
 }
 
@@ -34,7 +33,7 @@ createCells(cellColumn);
 const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', () => { 
     document.querySelectorAll('.cell').forEach(item => {
-        item.classList.remove('hover-color');
+        item.style.backgroundColor = "transparent";
     })
     let usrCellColumn = prompt('How many squares do you want on each side of your next grid?', '');
     if (usrCellColumn > 100 || usrCellColumn < 0) {
@@ -50,9 +49,12 @@ clearBtn.addEventListener('click', () => {
 const eraseBtn = document.getElementById('erase');
 eraseBtn.addEventListener('click', () => { 
     document.querySelectorAll('.cell').forEach(item => {
-        item.classList.remove('hover-color');
+        item.style.backgroundColor = "transparent";
     })
 })
 
 
-
+// document.querySelectorAll('.cell').forEach(item => {
+//     item.addEventListener('mouseover', e => e.target.classList.add('hover-color')
+//     )
+// })
