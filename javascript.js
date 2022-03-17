@@ -47,5 +47,12 @@ clearBtn.addEventListener('click', () => {
     }
 });
 
+const eraseBtn = document.getElementById('erase');
+eraseBtn.addEventListener('click', () => { 
+    document.querySelectorAll('.cell').forEach(item => {
+        item.classList.remove('hover-color');
+    })
+})
+
 
 
