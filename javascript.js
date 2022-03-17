@@ -31,6 +31,9 @@ function createCells(c) {
     cell.classList.add('cell', `cell${1+i}`);
     gridDiv.appendChild(cell);
     let cells = document.getElementsByClassName('cell');
+    for (let o = 0; o < cells.length; o++) {
+        cells[o].style.border = "1px solid black"
+    }
     for (let p = 0; p < cells.length; p++) {
         cells[p].style.width = maxWidth / c + 'px';
         cells[p].style.height = maxWidth / c + 'px';
