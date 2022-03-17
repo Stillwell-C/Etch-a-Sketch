@@ -25,7 +25,17 @@ function createCells(c) {
     changeColor(color)
 }
 
-let color = "coral"
+let color 
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(math.random()*16)];
+    }
+    return `${color}`;
+}
+
 
 function changeColor(color) {
     document.querySelectorAll('.cell').forEach(item => {
