@@ -22,15 +22,22 @@ body {
     flex-basis: 200px
 }
 
-.button-container {
-    display: flex;
+.left-container {
+    display:flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+    
 }
 
-.change-button {
-    border-radius: 4px;
-    padding: 10px 20px;
+.left-heading {
+    align-items: right;
+}
+
+.color-button {
+    padding: 5px 0px;
+    width: 80px;
 }
 
 .gridDiv {
@@ -49,6 +56,16 @@ body {
     box-sizing: border-box;
     border: 1px solid black
 }
-.hover-color {
-    background-color: coral;
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.change-button {
+    border-radius: 4px;
+    padding: 10px 0px;
+    width: 115px;
 }
