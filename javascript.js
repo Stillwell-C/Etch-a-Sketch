@@ -26,7 +26,7 @@ function createCells(c) {
     
 }
 
-let color = "coral"
+let color = "black"
 
 function changeColor(color) {
     document.querySelectorAll('.cell').forEach(item => {
@@ -35,15 +35,6 @@ function changeColor(color) {
 }
 
 let ranColor
-
-function getRandomColor() {
-    let letters = '0123456789ABCDEF';
-    let ranColor = '#';
-    for (let i = 0; i < 6; i++) {
-        ranColor += letters[Math.floor(Math.random()*16)];
-    }
-    return ranColor;
-}
 
 function changeColorRandom() {
     document.querySelectorAll('.cell').forEach(item => {
@@ -75,3 +66,44 @@ eraseBtn.addEventListener('click', () => {
     })
 })
 
+
+const blueBtn = document.getElementById('blue');
+const yellowBtn = document.getElementById('yellow');
+const redBtn = document.getElementById('red');
+const greenBtn = document.getElementById('green');
+const purpleBtn = document.getElementById('purple');
+const orangeBtn = document.getElementById('orange');
+const blackBtn = document.getElementById('black');
+const rainbowBtn = document.getElementById('rainbow');
+
+blueBtn.addEventListener('click', () => {
+    changeColor("blue");
+})
+
+yellowBtn.addEventListener('click', () => {
+    changeColor("yellow");
+})
+
+redBtn.addEventListener('click', () => {
+    changeColor("red");
+})
+
+greenBtn.addEventListener('click', () => {
+    changeColor("green");
+})
+
+purpleBtn.addEventListener('click', () => {
+    changeColor("purple");
+})
+
+orangeBtn.addEventListener('click', () => {
+    changeColor("orange");
+})
+
+blackBtn.addEventListener('click', () => {
+    changeColor("black");
+})
+
+rainbowBtn.addEventListener('click', () => {
+    changeColorRandom();
+})
