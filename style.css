@@ -1,29 +1,27 @@
+
+
 .container{
     display:flex;
     justify-content: center;
+    
 }
 
 .gridDiv {
     /* display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; */
-    max-width: 740px;
-    max-height: 740px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto 
+    auto auto auto auto auto auto; */
+    max-height: 500px;
+    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
-    
+    flex: 1;
 }
 
 .cell {
-    padding: 20px;
     border: solid black;
-    flex: 1;
-    
+    /* padding: 20px; */
 }
 
 .hover-color {
     background-color: coral;
 }
-
-/* .cell:hover {
-    background-color: coral;
-} */
